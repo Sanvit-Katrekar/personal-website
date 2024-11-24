@@ -1,0 +1,184 @@
+/* Reset and Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    scroll-behavior: smooth;
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #1b263b;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 15px;
+  }
+  
+  .nav-links a:hover {
+    color: #a9d6e5;
+  }
+  
+  /* Section Styling */
+  .section {
+    min-height: 100vh;
+    padding-top: 80px; /* Adjusted for fixed header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .content {
+    max-width: 600px;
+  }
+  
+  /* Section Background Colors */
+  .red-section {
+    background-image: url('../images/blue_mountain.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #121212;
+  }
+  
+  .white-section {
+    background-color: #ffffff;
+    color: #121212;
+  }
+  
+  .contact-section {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .social-links a {
+    font-weight: bold;
+    color: #007bff;
+    margin: 0 10px;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Comments Section Styling */
+  .comments-section {
+    background-color: #302b2b;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .comments-section h2, .comments-section h3 {
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  /* Carousel Styling */
+  .carousel {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .carousel-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .comment-box {
+    background-color: #494545; /* Dark gray background */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+  }
+  
+  /* Carousel Controls */
+  .carousel-control-prev, .carousel-control-next {
+    color: #ffffff;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #ffffff; /* White icons */
+    border-radius: 50%;
+  }
+  
+  /* Comment Form Styling */
+  .comment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px; /* Padding for better spacing */
+    background-color: #383838; /* Background color for form */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .comment-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .comment-form .form-control {
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #494949; /* Darker input background */
+    color: #ffffff; /* White text color */
+    border: none; /* Removed default border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .comment-form .form-control::placeholder {
+    color: #b0b0b0; /* Lighter placeholder color */
+  }
+  
+  .btn-submit {
+    background-color: #ff6b6b;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+  }
+  
+  .btn-submit:hover {
+    background-color: #ff8566;
+  }
+  
