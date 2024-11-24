@@ -181,4 +181,10 @@
   .btn-submit:hover {
     background-color: #ff8566;
   }
+
+  .quote {
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
   
