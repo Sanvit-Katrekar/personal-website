@@ -1,7 +1,12 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 import requests
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+API_KEY = os.getenv('API_KEY')
 
 # Initialize the Flask app
 app = Flask(__name__, static_folder='app/static', template_folder='app/templates')
@@ -32,7 +37,7 @@ with app.app_context():
 def index():
     category = 'amazing' # Choose one of the categories from the API docs
     api_url = 'https://api.api-ninjas.com/v1/quotes?category={}'.format(category)
-    response = requests.get(api_url, headers={'X-Api-Key': 'me8KGWNk5Mb7yFEPaaAIPOHxF97O8ap6E4RvvvLk'})
+    response = requests.get(api_url, headers={'X-Api-Key': API_KEY})
     if  response.status_code == requests.codes.ok:
         resp = response.json()
         first_quote = resp[0]['quote']
@@ -61,4 +66,4 @@ def add_comment():
     return redirect('/')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
